@@ -79,7 +79,7 @@
 
         <div class="mySlides fade">
 
-            <div id="uc-container2" class="uc-container">
+            <div id="uc-container3" class="uc-container">
               <div class="uc-initial-content">
                 <div class="event-start" style="background-image:url(samples/mr-polly/PFold/images/4-special-closed.png)"></div>
                 <!-- <span class="clickme">Click me</span> -->
@@ -95,7 +95,7 @@
         </div>
 
         <div class="mySlides fade">
-          <div id="uc-container3" class="uc-container">
+          <div id="uc-container4" class="uc-container">
             <div class="uc-initial-content">
               <div class="event-start" style="background-image:url(samples/mr-polly/PFold/images/4.png)"></div>
               <!-- <span class="clickme">Click me</span> -->
@@ -111,7 +111,7 @@
         </div>
 
         <div class="mySlides fade">
-          <div id="uc-container4" class="uc-container">
+          <div id="uc-container5" class="uc-container">
             <div class="uc-initial-content">
               <div class="event-start" style="background-image:url(samples/mr-polly/PFold/images/6.png)"></div>
               <!-- <span class="clickme">Click me</span> -->
@@ -127,7 +127,7 @@
         </div>
 
         <div class="mySlides fade">
-          <div id="uc-container5" class="uc-container">
+          <div id="uc-container6" class="uc-container">
             <div class="uc-initial-content">
               <div class="event-start" style="background-image:url(samples/mr-polly/PFold/images/8.png)"></div>
               <!-- <span class="clickme">Click me</span> -->
@@ -147,7 +147,7 @@
         </div>
 
         <div class="mySlides fade">
-          <div id="uc-container6" class="uc-container">
+          <div id="uc-container7" class="uc-container">
             <div class="uc-initial-content">
               <div class="event-start" style="background-image:url(samples/mr-polly/PFold/images/11.png)"></div>
               <!-- <span class="clickme">Click me</span> -->
@@ -163,7 +163,7 @@
         </div>
 
         <div class="mySlides fade">
-          <div id="uc-container7" class="uc-container">
+          <div id="uc-container8" class="uc-container">
             <div class="uc-initial-content">
               <div class="event-start" style="background-image:url(samples/mr-polly/PFold/images/13.png)"></div>
               <!-- <span class="clickme">Click me</span> -->
@@ -179,7 +179,7 @@
         </div>
 
         <div class="mySlides fade">
-          <div id="uc-container8" class="uc-container">
+          <div id="uc-container9" class="uc-container">
             <div class="uc-initial-content">
               <div class="event-start" style="background-image:url(samples/mr-polly/PFold/images/15.png)"></div>
               <!-- <span class="clickme">Click me</span> -->
@@ -416,6 +416,27 @@
 				} );
 
 			});
+
+      $(function() {
+
+        var $container8 = $( '#uc-container9' ),
+          pfold = $( '#uc-container9' ).pfold({
+            easing : 'ease-in-out',
+            folds : 2,
+            folddirection : ['right','right']
+          });
+
+        $container8.find( 'div.event-start' ).on( 'click', function() {
+
+          pfold.unfold();
+
+        } ).end().find( 'div.event-end' ).on( 'click', function() {
+
+          pfold.fold();
+
+        } );
+
+      });
 		</script>
     </body>
 </html>
